@@ -1,0 +1,440 @@
+{
+	"info": {
+		"_postman_id": "ec92aeb7-95d3-44bf-b6cf-8f7b1cae4e02",
+		"name": "Yandex_Home",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26168814"
+	},
+	"item": [
+		{
+			"name": "Данные аккаутна",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "ru,en;q=0.9"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Cookie",
+						"value": "gdpr=0; is_gdpr=0; is_gdpr_b=CLqNMxCJpgEoAg==; yandex_gid=213; font_loaded=YSv1; _ym_uid=1676205040860473063; i=WklNaw0dP9W/CDA8Yl8ZvUzxOIzsO6ZnH9oTLYndouiAIffnFLqRXL3LBmKDDhAoARBHt0R7YLqCfQiCaHWr0X3mSvc=; yandexuid=3010353301678577723; yuidss=3010353301678577723; ymex=1681169564.oyu.7239821531678460923#1993937723.yrts.1678577723#1993937723.yrtsi.1678577723; my=YwA=; uniqueuid=269963031678881918; cycada=yIX3l+lKfqfm9OGLbIcBSioi+xEZM3p0RjD+frsKr3Y=; _ym_isad=2; sae=0:99233ACE-2D27-4A3C-8FFB-6BB32B73BFE6:p:23.1.5.708:w:d:RU:20230211; _yasc=56M0i8iB0DpDWk2CPcqodE3Y+HJlzQFIR3objlkgk8AT2o70xXel3OTG7SB8/ntZeVCLQxQ9vZ6QWLNe; Session_id=3:1679128124.5.1.1677860374319:wiX5VQ:4f.1.2:1|548344275.0.2.3:1677860374|1735388144.428725.2.2:428725.3:1678289099|3:10267099.832036.cQEgfovwqgXBeE_Z54tkXRDlJF8; sessionid2=3:1679128124.5.1.1677860374319:wiX5VQ:4f.1.2:1|548344275.0.2.3:1677860374|1735388144.428725.2.2:428725.3:1678289099|3:10267099.832036.fakesign0000000000000000000; L=ABN5W3QCVnJgQXlgcn9aVwJSWnVVSg12KAA7CDUbNSIhIwY=.1679128124.15285.338582.33873b9007142770a28ef869f4aa2b41; yandex_login=danielvailo; ys=udn.cDpkYW5pZWx2YWlsbw%3D%3D#c_chck.1533026120; _ym_d=1679128136; yp=1679213506.uc.ru#1679213506.duc.ru#1710113723.brd.6301000000#1710113723.cld.2270452#1679155261.csc.1#1679179472.mcl.16lf96q#1679179472.mcv.0#1993217893.multib.1#1994488046.pcs.0#1694896128.szm.1_25:1536x864:1536x787#1994488124.udn.cDpkYW5pZWx2YWlsbw%3D%3D#1681668948.ygu.1#1710231843.ygo.213:213#1679135506.gpauto.55_798828:37_553619:140:1:1679128306"
+					},
+					{
+						"key": "Origin",
+						"value": "https://id.yandex.ru"
+					},
+					{
+						"key": "Referer",
+						"value": "https://id.yandex.ru/personal?dialog=personal-data"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 YaBrowser/23.1.5.708 Yowser/2.5 Safari/537.36"
+					},
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Yandex\";v=\"23\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "x-csrf-token",
+						"value": "99559c04e159a2de75dba4976cf1ec8d407dfddf:1679128134196"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\"operationName\":\"UpdatePersonalInfo\",\"variables\":{\"input\":{\"firstname\":\"Андрей\",\"lastname\":\"Черный\",\"birthday\":\"2001-01-11\",\"gender\":\"m\",\"city\":\"пермь\",\"timezone\":\"Europe/Moscow\",\"displayName\":\"Идентификатор \",\"deleteAvatar\":false}},\"query\":\"mutation UpdatePersonalInfo($input: UpdatePersonalInfoInput!) {\\n  viewerUpdatePersonalInfo(input: $input) {\\n    ... on UpdatePersonalInfoPayload {\\n      query {\\n        viewer {\\n          firstName\\n          lastName\\n          displayName\\n          city\\n          birthdate\\n          __typename\\n        }\\n        __typename\\n      }\\n      __typename\\n    }\\n    ... on UpdatePersonalInfoProblem {\\n      reason\\n      __typename\\n    }\\n    __typename\\n  }\\n}\"}]"
+				},
+				"url": {
+					"raw": "https://id.yandex.ru/security/graphql",
+					"protocol": "https",
+					"host": [
+						"id",
+						"yandex",
+						"ru"
+					],
+					"path": [
+						"security",
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Домашний адрес",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "ru,en;q=0.9"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Cookie",
+						"value": "gdpr=0; is_gdpr=0; is_gdpr_b=CLqNMxCJpgEoAg==; yandex_gid=213; font_loaded=YSv1; _ym_uid=1676205040860473063; i=WklNaw0dP9W/CDA8Yl8ZvUzxOIzsO6ZnH9oTLYndouiAIffnFLqRXL3LBmKDDhAoARBHt0R7YLqCfQiCaHWr0X3mSvc=; yandexuid=3010353301678577723; yuidss=3010353301678577723; ymex=1681169564.oyu.7239821531678460923#1993937723.yrts.1678577723#1993937723.yrtsi.1678577723; my=YwA=; uniqueuid=269963031678881918; _ym_isad=2; sae=0:99233ACE-2D27-4A3C-8FFB-6BB32B73BFE6:p:23.1.5.708:w:d:RU:20230211; Session_id=3:1679128124.5.1.1677860374319:wiX5VQ:4f.1.2:1|548344275.0.2.3:1677860374|1735388144.428725.2.2:428725.3:1678289099|3:10267099.832036.cQEgfovwqgXBeE_Z54tkXRDlJF8; sessionid2=3:1679128124.5.1.1677860374319:wiX5VQ:4f.1.2:1|548344275.0.2.3:1677860374|1735388144.428725.2.2:428725.3:1678289099|3:10267099.832036.fakesign0000000000000000000; L=ABN5W3QCVnJgQXlgcn9aVwJSWnVVSg12KAA7CDUbNSIhIwY=.1679128124.15285.338582.33873b9007142770a28ef869f4aa2b41; yandex_login=danielvailo; _ym_d=1679128530; ys=udn.cDpkYW5pZWx2YWlsbw%3D%3D#wprid.1679128566455568-3653613997011855633-sas3-0999-700-sas-l7-balancer-8080-BAL-8010#c_chck.1533026120; yp=1679213506.uc.ru#1679213506.duc.ru#1710113723.brd.6301000000#1710113723.cld.2270452#1679155261.csc.1#1679179472.mcl.f62377#1679179472.mcv.0#1993217893.multib.1#1994488567.pcs.0#1694896128.szm.1_25:1536x864:1536x787#1994488124.udn.cDpkYW5pZWx2YWlsbw%3D%3D#1681668948.ygu.1#1710231843.ygo.213:213#1679301367.gpauto.55_798931:37_553920:140:1:1679128557; _yasc=sK13X89jO/MsmqxIy/0sR2lGQFNex4w2DWfYzKAIb/Y/4ENFIv1AJUocZJAEl4WUGT3XunxMGGFRSMxv; cycada=NprVlVEEKMMVRaW4fQGfQP2+C8vVCk4l8SgFjqY1uXY="
+					},
+					{
+						"key": "Origin",
+						"value": "https://id.yandex.ru"
+					},
+					{
+						"key": "Referer",
+						"value": "https://id.yandex.ru/personal/addresses"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 YaBrowser/23.1.5.708 Yowser/2.5 Safari/537.36"
+					},
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Yandex\";v=\"23\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "x-csrf-token",
+						"value": "99559c04e159a2de75dba4976cf1ec8d407dfddf:1679128134196"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\"operationName\":\"CreateOrUpdateAddress\",\"variables\":{\"input\":{\"id\":\"\",\"comment\":\"\",\"entrance\":\"1\",\"floor\":\"2\",\"fullText\":\"Москва, улица Новый Арбат\",\"intercom\":\"21\",\"room\":\"5\",\"type\":\"Home\"}},\"query\":\"mutation CreateOrUpdateAddress($input: CreateOrUpdateAddressInput!) {\\n  response: createOrUpdateAddress(input: $input) {\\n    ... on CreateOrUpdateAddressPayload {\\n      __typename\\n      record {\\n        ...AddressDetails\\n        __typename\\n      }\\n    }\\n    ... on CreateOrUpdateAddressProblem {\\n      reason\\n      __typename\\n    }\\n    __typename\\n  }\\n}\\n\\nfragment AddressDetails on Address {\\n  id\\n  comment\\n  entrance\\n  floor\\n  fullText\\n  intercom\\n  region\\n  room\\n  shortText\\n  street\\n  type\\n  __typename\\n}\"}]"
+				},
+				"url": {
+					"raw": "https://id.yandex.ru/security/graphql",
+					"protocol": "https",
+					"host": [
+						"id",
+						"yandex",
+						"ru"
+					],
+					"path": [
+						"security",
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Рабочий адрес",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "ru,en;q=0.9"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Cookie",
+						"value": "gdpr=0; is_gdpr=0; is_gdpr_b=CLqNMxCJpgEoAg==; yandex_gid=213; font_loaded=YSv1; _ym_uid=1676205040860473063; i=WklNaw0dP9W/CDA8Yl8ZvUzxOIzsO6ZnH9oTLYndouiAIffnFLqRXL3LBmKDDhAoARBHt0R7YLqCfQiCaHWr0X3mSvc=; yandexuid=3010353301678577723; yuidss=3010353301678577723; ymex=1681169564.oyu.7239821531678460923#1993937723.yrts.1678577723#1993937723.yrtsi.1678577723; my=YwA=; uniqueuid=269963031678881918; sae=0:99233ACE-2D27-4A3C-8FFB-6BB32B73BFE6:p:23.1.5.708:w:d:RU:20230211; Session_id=3:1679128124.5.1.1677860374319:wiX5VQ:4f.1.2:1|548344275.0.2.3:1677860374|1735388144.428725.2.2:428725.3:1678289099|3:10267099.832036.cQEgfovwqgXBeE_Z54tkXRDlJF8; sessionid2=3:1679128124.5.1.1677860374319:wiX5VQ:4f.1.2:1|548344275.0.2.3:1677860374|1735388144.428725.2.2:428725.3:1678289099|3:10267099.832036.fakesign0000000000000000000; L=ABN5W3QCVnJgQXlgcn9aVwJSWnVVSg12KAA7CDUbNSIhIwY=.1679128124.15285.338582.33873b9007142770a28ef869f4aa2b41; yandex_login=danielvailo; _ym_d=1679128530; ys=udn.cDpkYW5pZWx2YWlsbw%3D%3D#wprid.1679128566455568-3653613997011855633-sas3-0999-700-sas-l7-balancer-8080-BAL-8010#c_chck.1533026120; _yasc=sK13X89jO/MsmqxIy/0sR2lGQFNex4w2DWfYzKAIb/Y/4ENFIv1AJUocZJAEl4WUGT3XunxMGGFRSMxv; cycada=NprVlVEEKMMVRaW4fQGfQP2+C8vVCk4l8SgFjqY1uXY=; yp=1679213506.uc.ru#1679213506.duc.ru#1710113723.brd.6301000000#1710113723.cld.2270452#1679155261.csc.1#1679179472.mcl.f62377#1679179472.mcv.0#1993217893.multib.1#1994488567.pcs.0#1694896128.szm.1_25:1536x864:1536x787#1994488124.udn.cDpkYW5pZWx2YWlsbw%3D%3D#1681668948.ygu.1#1710231843.ygo.213:213#1679136106.gpauto.55_798828:37_553619:140:1:1679128906"
+					},
+					{
+						"key": "Origin",
+						"value": "https://id.yandex.ru"
+					},
+					{
+						"key": "Referer",
+						"value": "https://id.yandex.ru/personal/addresses"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 YaBrowser/23.1.5.708 Yowser/2.5 Safari/537.36"
+					},
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Yandex\";v=\"23\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "x-csrf-token",
+						"value": "99559c04e159a2de75dba4976cf1ec8d407dfddf:1679128134196"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\"operationName\":\"CreateOrUpdateAddress\",\"variables\":{\"input\":{\"id\":\"\",\"comment\":\"\",\"entrance\":\"3\",\"floor\":\"3\",\"fullText\":\"Улан-Удэ, Республика Бурятия, улица Ленина\",\"intercom\":\"14\",\"room\":\"15\",\"type\":\"Work\"}},\"query\":\"mutation CreateOrUpdateAddress($input: CreateOrUpdateAddressInput!) {\\n  response: createOrUpdateAddress(input: $input) {\\n    ... on CreateOrUpdateAddressPayload {\\n      __typename\\n      record {\\n        ...AddressDetails\\n        __typename\\n      }\\n    }\\n    ... on CreateOrUpdateAddressProblem {\\n      reason\\n      __typename\\n    }\\n    __typename\\n  }\\n}\\n\\nfragment AddressDetails on Address {\\n  id\\n  comment\\n  entrance\\n  floor\\n  fullText\\n  intercom\\n  region\\n  room\\n  shortText\\n  street\\n  type\\n  __typename\\n}\"}]"
+				},
+				"url": {
+					"raw": "https://id.yandex.ru/security/graphql",
+					"protocol": "https",
+					"host": [
+						"id",
+						"yandex",
+						"ru"
+					],
+					"path": [
+						"security",
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Доп.почта",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "ru,en;q=0.9"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Cookie",
+						"value": "gdpr=0; is_gdpr=0; is_gdpr_b=CLqNMxCJpgEoAg==; yandex_gid=213; font_loaded=YSv1; _ym_uid=1676205040860473063; i=WklNaw0dP9W/CDA8Yl8ZvUzxOIzsO6ZnH9oTLYndouiAIffnFLqRXL3LBmKDDhAoARBHt0R7YLqCfQiCaHWr0X3mSvc=; yandexuid=3010353301678577723; yuidss=3010353301678577723; ymex=1681169564.oyu.7239821531678460923#1993937723.yrts.1678577723#1993937723.yrtsi.1678577723; my=YwA=; uniqueuid=269963031678881918; sae=0:99233ACE-2D27-4A3C-8FFB-6BB32B73BFE6:p:23.1.5.708:w:d:RU:20230211; _ym_d=1679128530; _yasc=sK13X89jO/MsmqxIy/0sR2lGQFNex4w2DWfYzKAIb/Y/4ENFIv1AJUocZJAEl4WUGT3XunxMGGFRSMxv; cycada=NprVlVEEKMMVRaW4fQGfQP2+C8vVCk4l8SgFjqY1uXY=; device_id=ad685441bcb7e418b43c5b1f87f68d0ef1ef2a550; active-browser-timestamp=1679128958934; _ym_isad=1; Session_id=3:1679129139.5.1.1677860374319:wiX5VQ:4f.1.2:1|548344275.0.2.3:1677860374|1735388144.428725.2.2:428725.3:1678289099|3:10267099.624107.TgY5Z8pEAhV_Kqw15DcatmHynws; sessionid2=3:1679129139.5.1.1677860374319:wiX5VQ:4f.1.2:1|548344275.0.2.3:1677860374|1735388144.428725.2.2:428725.3:1678289099|3:10267099.624107.fakesign0000000000000000000; yp=1679213506.uc.ru#1679213506.duc.ru#1710113723.brd.6301000000#1710113723.cld.2270452#1679155261.csc.1#1679179472.mcl.f62377#1679179472.mcv.0#1993217893.multib.1#1994488567.pcs.0#1694896128.szm.1_25:1536x864:1536x787#1994489139.udn.cDrQmNC00LXQvdGC0LjRhNC40LrQsNGC0L7RgA%3D%3D#1681668948.ygu.1#1710231843.ygo.213:213#1679136106.gpauto.55_798828:37_553619:140:1:1679128906; L=ABN5W3QCVnJgQXlgcn9ZVgFaU3RbSAN1KAA7CDUbNSIhIwY=.1679129139.15285.348454.bc2a55cae2575e6d60f2e1bedad9f3d7; yandex_login=danielvailo; ys=udn.cDrQmNC00LXQvdGC0LjRhNC40LrQsNGC0L7RgA%3D%3D#c_chck.3178180974"
+					},
+					{
+						"key": "Origin",
+						"value": "https://id.yandex.ru"
+					},
+					{
+						"key": "Referer",
+						"value": "https://id.yandex.ru/security?dialog=recovery-email"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 YaBrowser/23.1.5.708 Yowser/2.5 Safari/537.36"
+					},
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Yandex\";v=\"23\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "x-csrf-token",
+						"value": "3e8f5d845553f651c6eb35a8ae366b8d43456522:1679129140532"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\"operationName\":\"AccountAddRecoveryEmail\",\"variables\":{\"input\":{\"email\":\"dan.vailo@yandex.ru\",\"trackId\":null,\"redirectUrl\":\"https://id.yandex.ru/security\",\"validationUrl\":\"https://id.yandex.ru/security/activate-recovery-email\"}},\"query\":\"mutation AccountAddRecoveryEmail($input: AddRecoveryEmailInput!) {\\n  accountAddRecoveryEmail(input: $input) {\\n    ... on AddRecoveryEmailPayload {\\n      trackId\\n      query {\\n        account {\\n          ...AccountRecoveryEmails\\n          __typename\\n        }\\n        __typename\\n      }\\n      __typename\\n    }\\n    ... on AddRecoveryEmailProblem {\\n      trackId\\n      reason\\n      __typename\\n    }\\n    __typename\\n  }\\n}\\n\\nfragment AccountRecoveryEmails on Account {\\n  id\\n  emails {\\n    address\\n    type\\n    isPrimary\\n    isConfirmed\\n    __typename\\n  }\\n  __typename\\n}\"}]"
+				},
+				"url": {
+					"raw": "https://id.yandex.ru/security/graphql",
+					"protocol": "https",
+					"host": [
+						"id",
+						"yandex",
+						"ru"
+					],
+					"path": [
+						"security",
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Котр.вопрос",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "ru,en;q=0.9"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Cookie",
+						"value": "gdpr=0; is_gdpr=0; is_gdpr_b=CLqNMxCJpgEoAg==; yandex_gid=213; font_loaded=YSv1; _ym_uid=1676205040860473063; i=WklNaw0dP9W/CDA8Yl8ZvUzxOIzsO6ZnH9oTLYndouiAIffnFLqRXL3LBmKDDhAoARBHt0R7YLqCfQiCaHWr0X3mSvc=; yandexuid=3010353301678577723; yuidss=3010353301678577723; ymex=1681169564.oyu.7239821531678460923#1993937723.yrts.1678577723#1993937723.yrtsi.1678577723; my=YwA=; uniqueuid=269963031678881918; sae=0:99233ACE-2D27-4A3C-8FFB-6BB32B73BFE6:p:23.1.5.708:w:d:RU:20230211; _ym_d=1679128530; _yasc=sK13X89jO/MsmqxIy/0sR2lGQFNex4w2DWfYzKAIb/Y/4ENFIv1AJUocZJAEl4WUGT3XunxMGGFRSMxv; cycada=NprVlVEEKMMVRaW4fQGfQP2+C8vVCk4l8SgFjqY1uXY=; device_id=ad685441bcb7e418b43c5b1f87f68d0ef1ef2a550; active-browser-timestamp=1679128958934; _ym_isad=1; Session_id=3:1679129139.5.1.1677860374319:wiX5VQ:4f.1.2:1|548344275.0.2.3:1677860374|1735388144.428725.2.2:428725.3:1678289099|3:10267099.624107.TgY5Z8pEAhV_Kqw15DcatmHynws; sessionid2=3:1679129139.5.1.1677860374319:wiX5VQ:4f.1.2:1|548344275.0.2.3:1677860374|1735388144.428725.2.2:428725.3:1678289099|3:10267099.624107.fakesign0000000000000000000; yp=1679213506.uc.ru#1679213506.duc.ru#1710113723.brd.6301000000#1710113723.cld.2270452#1679155261.csc.1#1679179472.mcl.f62377#1679179472.mcv.0#1993217893.multib.1#1994488567.pcs.0#1694896128.szm.1_25:1536x864:1536x787#1994489139.udn.cDrQmNC00LXQvdGC0LjRhNC40LrQsNGC0L7RgA%3D%3D#1681668948.ygu.1#1710231843.ygo.213:213#1679136106.gpauto.55_798828:37_553619:140:1:1679128906; L=ABN5W3QCVnJgQXlgcn9ZVgFaU3RbSAN1KAA7CDUbNSIhIwY=.1679129139.15285.348454.bc2a55cae2575e6d60f2e1bedad9f3d7; yandex_login=danielvailo; ys=udn.cDrQmNC00LXQvdGC0LjRhNC40LrQsNGC0L7RgA%3D%3D#c_chck.3178180974; track%3Adan.vailo%40yandex.ru=15165df2a7e3503574b16a6129e087f425"
+					},
+					{
+						"key": "Origin",
+						"value": "https://id.yandex.ru"
+					},
+					{
+						"key": "Referer",
+						"value": "https://id.yandex.ru/security?dialog=control-question"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 YaBrowser/23.1.5.708 Yowser/2.5 Safari/537.36"
+					},
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Yandex\";v=\"23\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "x-csrf-token",
+						"value": "3e8f5d845553f651c6eb35a8ae366b8d43456522:1679129140532"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\"operationName\":\"SetQuestion\",\"variables\":{\"input\":{\"newAnswer\":\"Магнитофон\",\"newQuestion\":\"\",\"oldAnswer\":\"\",\"questionId\":\"15\",\"trackId\":null}},\"query\":\"mutation SetQuestion($input: SetQuestionInput!) {\\n  accountSetQuestion(input: $input) {\\n    ... on SetQuestionProblem {\\n      reason\\n      trackId\\n      __typename\\n    }\\n    ... on SetQuestionPayload {\\n      query {\\n        account {\\n          ...ControlQuestionAccount\\n          __typename\\n        }\\n        __typename\\n      }\\n      __typename\\n    }\\n    __typename\\n  }\\n}\\n\\nfragment ControlQuestionAccount on Account {\\n  id\\n  question {\\n    id\\n    text\\n    __typename\\n  }\\n  __typename\\n}\"}]"
+				},
+				"url": {
+					"raw": "https://id.yandex.ru/security/graphql",
+					"protocol": "https",
+					"host": [
+						"id",
+						"yandex",
+						"ru"
+					],
+					"path": [
+						"security",
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
